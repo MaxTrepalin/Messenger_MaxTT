@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Messenger.ListViewPage1"
+          
+                         >
+    <StackLayout>
+        <ListView x:Name="ChatsPageList"
+                 
+            ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+          
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell x:Name="ChatVievName">
+          <StackLayout>
+              <Label Text=""></Label>
+            <Label x:Name="Chat1" Text="hi" HorizontalOptions="Start" Background="green" FontSize="Header"
+                   Style="{DynamicResource ListItemTextStyle}" />
+                            <Label x:Name="Chat2" Text="Hello!" HorizontalOptions="End" Background="Gray" FontSize="Header" Margin="0,20,0,0"
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+ 
+  </ListView>
+        <Frame BorderColor="Blue">
+        <StackLayout>
+                <Entry x:Name="Entry_chat" Keyboard="Chat"></Entry>
+                <Button x:Name ="Send_button" Text="Отправить" BackgroundColor="Green" Clicked="Send_button_Clicked"  ></Button>
+        </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="LightGray" BorderColor="DarkGray">
+        
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="contacts_button" HorizontalOptions="StartAndExpand"  Text ="Контакты" Clicked="contacts_button_Clicked" ></Button>
+                <Button x:Name="status_button" HorizontalOptions="CenterAndExpand"  Text ="Список чатов" Clicked="status_button_Clicked"></Button>
+                <Button x:Name="chats_button" HorizontalOptions="CenterAndExpand" Text ="Текущий чат"></Button>
+            <Button x:Name="settings_button" HorizontalOptions="EndAndExpand" Text="Настройки" Clicked="settings_button_Clicked"></Button>
+        </StackLayout>
+    </Frame>
+
+    </StackLayout>
+   
+</ContentPage>

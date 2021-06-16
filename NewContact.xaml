@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Messenger.NewContact"
+            >
+
+
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3"  Padding="16" HeightRequest="20" CornerRadius="30">
+            <Label Text="Добавить контакты"  HorizontalTextAlignment="Center"  TextColor="White" FontSize="16" FontAttributes="Bold"/>
+        </Frame>
+        <Frame>
+            <Entry BackgroundColor="LightGray"  x:Name="findNewContact_entry" Placeholder="Введите никнейм" ></Entry>
+        </Frame>
+        <Frame BorderColor="Gray">
+            <Label x:Name="label_statucContactFind" Text=""></Label>
+           
+        </Frame>
+        <Button x:Name="butoon_ADDContact" HeightRequest="30" Text="Добавить контакт" ></Button>
+        <Frame BackgroundColor="LightGray" BorderColor="DarkGray">
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="contacts_button" HorizontalOptions="StartAndExpand"  Text ="Контакты" Clicked="contacts_button_Clicked"  ></Button>
+                <Button x:Name="status_button" HorizontalOptions="CenterAndExpand"  Text ="Список чатов" Clicked="status_button_Clicked"  ></Button>
+                <Button x:Name="chats_button" HorizontalOptions="CenterAndExpand" Text ="Текущий чат" Clicked="chats_button_Clicked"
+                        ></Button>
+                <Button x:Name="settings_button" HorizontalOptions="EndAndExpand" Text="Настройки" Clicked="settings_button_Clicked" ></Button>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Messenger.MainPage"
+            >
+    
+    <ContentPage.Resources>
+        <ResourceDictionary x:Name="ResChats" >
+            <x:Array  x:Key="ListChats"  Type="{x:Type x:String}" >
+                <x:String>Шаг</x:String>
+                <x:String>Google</x:String>
+                <x:String>111</x:String>
+                <x:String>33</x:String>
+            </x:Array>
+            <ListView x:Name="ChatsList" x:Key="ListVievChats" ItemsSource="{StaticResource Key=ListChats}" />
+        </ResourceDictionary >
+    </ContentPage.Resources>
+
+  
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3"  Padding="16" HeightRequest="20" CornerRadius="30">
+            <Label Text="Чаты"  HorizontalTextAlignment="Center"  TextColor="White" FontSize="16" FontAttributes="Bold"/>
+        </Frame>
+        <Frame>
+            <Entry BackgroundColor="LightGray"  x:Name="find_entry" Placeholder="Поиск" ></Entry>
+        </Frame>
+        <Frame BorderColor="Gray">
+
+            <ListView ItemsSource="{StaticResource Key=ListChats}" Focused="ListView_Focused">               
+
+            </ListView>
+        </Frame>
+        <Frame BackgroundColor="LightGray" BorderColor="DarkGray">
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="contacts_button" HorizontalOptions="StartAndExpand"  Text ="Контакты" Clicked="contacts_button_Clicked"  ></Button>
+                <Button x:Name="status_button" HorizontalOptions="CenterAndExpand"  Text ="Список чатов" ></Button>
+                <Button x:Name="chats_button" HorizontalOptions="CenterAndExpand" Text ="Текущий чат" Clicked="chats_button_Clicked"
+                        ></Button>
+                <Button x:Name="settings_button" HorizontalOptions="EndAndExpand" Text="Настройки" Clicked="settings_button_Clicked"></Button>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>

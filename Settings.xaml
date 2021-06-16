@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Messenger.Settings">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Настройки"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+
+    <StackLayout>
+        <Label x:Name="label_login" Text="Введите логин"></Label>
+        <Entry x:Name="entry_login"></Entry>
+        <Label x:Name="label_password" Text="Введите пароль" ></Label>
+        <Entry x:Name="entry_password" IsPassword="True"></Entry>
+        <Button x:Name="button_login" Text="Войти" HeightRequest="30" ></Button>
+        <Button x:Name="button_registration" Text="Зарегистрироваться" Clicked="button_registration_Clicked" HeightRequest="30"></Button>
+
+
+        <Frame BackgroundColor="LightGray" BorderColor="DarkGray"  VerticalOptions="EndAndExpand">
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="contacts_button" HorizontalOptions="StartAndExpand"  Text ="Контакты" Clicked="contacts_button_Clicked"  ></Button>
+                <Button x:Name="status_button" HorizontalOptions="CenterAndExpand"  Text ="Список чатов" Clicked="status_button_Clicked" ></Button>
+                <Button x:Name="chats_button" HorizontalOptions="CenterAndExpand" Text ="Текущий чат" Clicked="chats_button_Clicked_1"></Button>
+                <Button x:Name="settings_button" HorizontalOptions="EndAndExpand" Text="Настройки"></Button>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
