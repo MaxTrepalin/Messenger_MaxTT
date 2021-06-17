@@ -50,9 +50,7 @@ namespace Messenger
         private void Send_button_Clicked(object sender, EventArgs e)
         {
 
-            Label chat1 = new Label();
-            chat1.SetBinding(Label.TextProperty, "Сообщение: " + Entry_chat.Text);
-           // ChatsPageList.ItemsSource = Entry_chat(ToString);
+             Chat_StackLayout.Children.Add(new Label { Text = Entry_chat.Text, BackgroundColor = Color.LightGreen });
         }
 
         private  async void settings_button_Clicked(object sender, EventArgs e)
