@@ -18,7 +18,7 @@
         <Label x:Name="label_password2" Text="Введите еще раз пароль" ></Label>
         <Entry x:Name="entry_password2" IsPassword="True"></Entry>
     
-        <Button x:Name="button_registration" Text="Зарегистрироваться" HeightRequest="30"></Button>
+        <Button x:Name="button_registration" Text="Зарегистрироваться" HeightRequest="30" Clicked="button_registration_Clicked"></Button>
         <Button x:Name="button_registrationCancel" Text="Отменить регистрацию" HeightRequest="30" Clicked="button_registrationCancel_Clicked"></Button>
 
 
