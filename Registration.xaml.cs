@@ -43,6 +43,29 @@ namespace Messenger
 
             await Navigation.PushAsync(secondPage);
         }
+        
+                
+
+        private void button_registration_Clicked(object sender, EventArgs e)
+        {
+                        
+                string login = label_login.Text;
+                string pass1 = label_password.Text;
+                string pass2 = label_password.Text;
+                if (pass1 != pass2)
+                {
+                    DisplayAlert("Пароли отличаются", "Проверьте ввод паролей", "Ok");
+                }
+                else if (login == null)
+                {
+                    DisplayAlert("Проверьте поле Логин", "Введите логин используя цифры и латинские бурвы", "Ok");
+                }
+                else
+                {
+                    DisplayAlert("РЕГИСТРАЦИЯ", "Успешно!", "Ok");
+                }
+            
+        }
 
         private async void contacts_button_Clicked(object sender, EventArgs e)
         {
